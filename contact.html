@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Khaana Khojo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #e74c3c;
+    }
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #e74c3c;
+    }
+    .contact-section {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .contact-section h1 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .contact-info {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+      color: #555;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      font-size: 16px;
+    }
+    button {
+      background: linear-gradient(135deg, #fd79a8, #ff7675);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+    button:hover {
+      background: linear-gradient(135deg, #e84393, #fd6c6c);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(253, 121, 168, 0.4);
+    }
+    footer {
+      background: rgba(44, 62, 80, 0.95);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 50px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="logo">🍽 Khaana Khojo</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="contact-section">
+      <h1>Contact Us 📬</h1>
+      <div class="contact-info">
+        <p>We’d love to hear from you! Whether it’s feedback, a partnership, or just a hello — drop us a message below.</p>
+        <p><strong>Email:</strong> hello@khaanakhojo.com | <strong>Phone:</strong> +91-8273499887</p>
+      </div>
+      <form onsubmit="submitForm(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message ✉️</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Khaana Khojo - Made with ❤ for food lovers</p>
+      <p>Contact: hello@khaanakhojo.com | +91-8273499887</p>
+    </footer>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`Thank you, ${name}! 🙏\nYour message has been sent successfully.\nWe'll get back to you soon.`);
+      document.querySelector('form').reset();
+    }
+  </script>
+</body>
+</html>
